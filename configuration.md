@@ -2,16 +2,16 @@
 
 - [Introduction](#introduction)
 - [Files](#files)
-    - [acl.php](#files-acl-dot-php)
-    - [app.php](#files-app-dot-php)
-    - [compile.php](#files-compile-dot-php)
-    - [consoles.php](#files-consoles-dot-php)
-    - [database.php](#files-database-dot-php)
-    - [flysystem.php](#files-flysystem-dot-php)
-    - [inliner.php](#files-inliner-dot-php)
-    - [path.php](#files-path-dot-php)
-    - [script.php](#files-script-dot-php)
-    - [services.php](#files-services-dot-php)
+    - [acl.php](#aclphp)
+    - [app.php](#appphp)
+    - [compile.php](#compilephp)
+    - [consoles.php](#consolesphp)
+    - [database.php](#databasephp)
+    - [flysystem.php](#flysystemphp)
+    - [inliner.php](#inlinerphp)
+    - [path.php](#pathphp)
+    - [script.php](#scriptphp)
+    - [services.php](#servicesphp)
 
 ## Introduction
 
@@ -36,32 +36,32 @@ APP_DEBUG=true
 
 The listed files were the default configuration assigned, check their capability
 
-#### [acl.php](#files-acl-dot-php)
+#### [acl.php](#aclphp)
 This handles the user roles, filtering classes such as CSRF, Authentication and Access.
 
-#### [app.php](#files-app-dot-php)
+#### [app.php](#appphp)
 This handles the entire application configuration such as timezone, debug, language, flsystem, mailer, services and class aliases.
 
-#### [compile.php](#files-compile-dot-php)
+#### [compile.php](#compilephp)
 This handles the lists of Slayer classes that possibly can be combined into 1 single file, that this will really perform faster.
 
-#### [consoles.php](#files-consoles-dot-php)
+#### [consoles.php](#consolesphp)
 All console commands that have been listed using ``php slayer`` command are stored here.
 
-#### [database.php](#files-database-dot-php)
+#### [database.php](#databasephp)
 The database configurations, adapters such as MySQL, PostgreSQL, sqlite or oracle.
 
-#### [flysystem.php](#files-flysystem-dot-php)
+#### [flysystem.php](#flysystemphp)
 An extensive filesystem manager that supports not such a local but also S3, Rackspace, FTP and many more [(visit flysystem website)](flysystem.thephpleague.com)
 
-#### [inliner.php](#files-inliner-dot-php)
+#### [inliner.php](#inlinerphp)
 This handles the mail inligning.
 
-#### [path.php](#files-path-dot-php)
+#### [path.php](#pathphp)
 This handles the folder path of a certain instance, such as migrations, resources, logs, sotrage, models and more.
 
-#### [script.php](#files-script-dot-php)
+#### [script.php](#scriptphp)
 The script command that you want be running using ``php slayer run <key>``
 
-#### [services.php](#files-services-dot-php)
+#### [services.php](#servicesphp)
 This file is dedicated configuration for all vendors/services
