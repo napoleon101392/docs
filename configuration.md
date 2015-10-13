@@ -52,7 +52,7 @@ All console commands that have been listed using ``php slayer`` command are stor
 The database configurations, adapters such as MySQL, PostgreSQL, sqlite or oracle.
 
 #### [flysystem.php](#flysystemphp)
-An extensive filesystem manager that supports not such a local but also S3, Rackspace, FTP and many more [(visit flysystem website)](flysystem.thephpleague.com)
+An extensive filesystem manager that supports not such a local but also S3, Rackspace, FTP and many more [(visit flysystem website)](http://flysystem.thephpleague.com)
 
 #### [inliner.php](#inlinerphp)
 This handles the mail inligning.
