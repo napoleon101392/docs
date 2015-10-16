@@ -2,23 +2,37 @@
 
 return [
 
+    'Prologue'  => [
+        'Contribution Guide' => 'prologue/contribution_guide.md',
+        'API Documentation'  => 'prologue/api_documentation.md',
+    ],
+
     'Setup' => [
-        'Installation'  => 'setup/Installation.md',
+        'Installation'  => 'setup/installation.md',
         'Configuration' => 'setup/configuration.md',
     ],
 
     'MMVC' => [
-        'Module'        => 'mmvc/module.md',
-        'Model'         => 'mmvc/model.md',
-        'View'          => 'mmvc/view.md',
         'Controller'    => 'mmvc/controller.md',
+        'Model'         => 'mmvc/model.md',
+        'Module'        => 'mmvc/module.md',
+        'View'          => 'mmvc/view.md',
     ],
 
     'Supporting Structure' => [
-        'Routing'          => 'supporting_structure/routing.md',
         'Error Handler'    => 'supporting_structure/error_handler.md',
+        'Routing'          => 'supporting_structure/routing.md',
         'Service Provider' => 'supporting_structure/provider.md',
         'Validator'        => 'supporting_structure/validator.md',
+        'Sandbox'          => 'supporting_structure/sandbox.md',
+        'Storage'          => [
+            'Cache'      => 'supporting_structure/storage/cache.md',
+            'Web Server' => 'supporting_structure/storage/web_server.md',
+            'Logging'    => 'supporting_structure/storage/logging.md',
+            'Session'    => 'supporting_structure/storage/session.md',
+            'Views'      => 'supporting_structure/storage/views.md',
+        ],
+        'Unit Testing'     => 'supporting_structure/unit_testing.md',
     ],
 
     'Services' => [
@@ -31,6 +45,7 @@ return [
         'Filter'               => 'services/filter.md',
         'Flash'                => 'services/flash.md',
         'FlashBag'             => 'services/flash_bag.md',
+        'Flysystem'            => 'services/flysystem.md',
         'Lang'                 => 'services/lang.md',
         'Log'                  => 'services/log.md',
         'Mail'                 => 'services/mail.md',
@@ -43,7 +58,6 @@ return [
         'Session'              => 'services/session.md',
         'URL'                  => 'services/url.md',
         'View'                 => 'services/view.md',
-        'Flysystem'            => 'services/flysystem.md',
     ],
 
     'Misc.' => [
