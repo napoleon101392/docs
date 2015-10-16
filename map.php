@@ -2,7 +2,7 @@
 
 return [
 
-    'Prologue'  => [
+    'Prologue' => [
         'Contribution Guide' => 'prologue/contribution_guide.md',
         'API Documentation'  => 'prologue/api_documentation.md',
     ],
@@ -22,17 +22,17 @@ return [
     'Supporting Structure' => [
         'Error Handler'    => 'supporting_structure/error_handler.md',
         'Routing'          => 'supporting_structure/routing.md',
-        'Service Provider' => 'supporting_structure/service_provider.md',
-        'Validator'        => 'supporting_structure/validator.md',
         'Sandbox'          => 'supporting_structure/sandbox.md',
-        'Unit Testing'     => 'supporting_structure/unit_testing.md',
+        'Service Provider' => 'supporting_structure/service_provider.md',
         'Storage'          => [
             'Cache'      => 'supporting_structure/storage/cache.md',
-            'Web Server' => 'supporting_structure/storage/web_server.md',
             'Logging'    => 'supporting_structure/storage/logging.md',
             'Session'    => 'supporting_structure/storage/session.md',
             'Views'      => 'supporting_structure/storage/views.md',
+            'Web Server' => 'supporting_structure/storage/web_server.md',
         ],
+        'Unit Testing'     => 'supporting_structure/unit_testing.md',
+        'Validator'        => 'supporting_structure/validator.md',
     ],
 
     'Services' => [
