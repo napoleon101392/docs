@@ -12,8 +12,9 @@
     - [path.php](#pathphp)
     - [script.php](#scriptphp)
     - [services.php](#servicesphp)
+- [Generating Composer](#generating-composer)
 
-## Introduction
+## Introduction [#](#introduction)
 
 The first thing you need to do is to copy the *`.env.example`* as *`.env`* in the same root folder, modify the file on what configuration do you have.
 
@@ -32,36 +33,48 @@ APP_DEBUG=true
 * You're asking why there is a redundant files such as `<root>/config/app.php` and `<root>/config/local/app.php`
   * We assigned our environment to __*local*__, the process will be `local/app.php` will be loaded first before loading the base `app.php`.
 
-## [Files](#files)
+## Files [#](#files)
 
 The listed files were the default configuration assigned, check their capability
 
-#### [acl.php](#aclphp)
+#### acl.php [#](#aclphp)
 This handles the user roles, filtering classes such as CSRF, Authentication and Access.
 
-#### [app.php](#appphp)
+#### app.php [#](#appphp)
 This handles the entire application configuration such as timezone, debug, language, flsystem, mailer, services and class aliases.
 
-#### [compile.php](#compilephp)
+#### compile.php [#](#compilephp)
 This handles the lists of Slayer classes that possibly can be combined into 1 single file, that this will really perform faster.
 
-#### [consoles.php](#consolesphp)
+#### consoles.php [#](#consolesphp)
 All console commands that have been listed using ``php slayer`` command are stored here.
 
-#### [database.php](#databasephp)
+#### database.php [#](#databasephp)
 The database configurations, adapters such as MySQL, PostgreSQL, sqlite or oracle.
 
-#### [flysystem.php](#flysystemphp)
+#### flysystem.php [#](#flysystemphp)
 An extensive filesystem manager that supports not such a local but also S3, Rackspace, FTP and many more [(visit flysystem website)](http://flysystem.thephpleague.com)
 
-#### [inliner.php](#inlinerphp)
+#### inliner.php [#](#inlinerphp)
 This handles the mail inligning.
 
-#### [path.php](#pathphp)
+#### path.php [#](#pathphp)
 This handles the folder path of a certain instance, such as migrations, resources, logs, sotrage, models and more.
 
-#### [script.php](#scriptphp)
+#### script.php [#](#scriptphp)
 The script command that you want be running using ``php slayer run <key>``
 
-#### [services.php](#servicesphp)
+#### services.php [#](#servicesphp)
 This file is dedicated configuration for all vendors/services
+
+## Generating Composer [#](#generating-composer)
+
+I prefer to use ``<project>/bootstrap/generate-composer`` than modifying ``<project>/composer.json``.
+
+Modify the ``<project>/bootstrap/generate-composer``, the structure is written using PHP, you can ``require`` a new package, or change some properties.
+
+To update your ``composer.json``, run the command using your terminal
+
+    vagrant@computer: p/slayer$ php bootstrap/generate-composer
+    > Running (composer validate):
+    > ./composer.json is valid
