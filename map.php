@@ -22,9 +22,10 @@ return [
     'Supporting Structure' => [
         'Error Handler'    => 'supporting_structure/error_handler.md',
         'Routing'          => 'supporting_structure/routing.md',
-        'Service Provider' => 'supporting_structure/provider.md',
+        'Service Provider' => 'supporting_structure/service_provider.md',
         'Validator'        => 'supporting_structure/validator.md',
         'Sandbox'          => 'supporting_structure/sandbox.md',
+        'Unit Testing'     => 'supporting_structure/unit_testing.md',
         'Storage'          => [
             'Cache'      => 'supporting_structure/storage/cache.md',
             'Web Server' => 'supporting_structure/storage/web_server.md',
@@ -32,7 +33,6 @@ return [
             'Session'    => 'supporting_structure/storage/session.md',
             'Views'      => 'supporting_structure/storage/views.md',
         ],
-        'Unit Testing'     => 'supporting_structure/unit_testing.md',
     ],
 
     'Services' => [
@@ -61,10 +61,10 @@ return [
     ],
 
     'Misc.' => [
-        'Brood Console' => 'misc/console.md',
+        'Brood Console' => 'misc/brood_console.md',
         'Database' => [
-            'Migrations' => 'misc/database/migrations.md',
             'Factories'  => 'misc/database/factories.md',
+            'Migrations' => 'misc/database/migrations.md',
         ],
     ],
 ];
