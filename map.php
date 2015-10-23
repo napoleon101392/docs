@@ -66,5 +66,6 @@ return [
             'Factories'  => 'misc/database/factories.md',
             'Migrations' => 'misc/database/migrations.md',
         ],
+        'Coding Style'   => 'misc/coding-style.md',
     ],
 ];
