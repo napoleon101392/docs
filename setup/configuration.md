@@ -1,80 +1,138 @@
 # Configuration
+You can learn how to set up your application credentials, modules, services, database and many more.
 
-- [Introduction](#introduction)
-- [Files](#files)
-    - [acl.php](#aclphp)
-    - [app.php](#appphp)
-    - [compile.php](#compilephp)
-    - [consoles.php](#consolesphp)
-    - [database.php](#databasephp)
-    - [flysystem.php](#flysystemphp)
-    - [inliner.php](#inlinerphp)
-    - [path.php](#pathphp)
-    - [script.php](#scriptphp)
-    - [services.php](#servicesphp)
-- [Generating Composer](#generating-composer)
+- [App](#app)
+- [Cache](#cache)
+- [Consoles](#consoles)
+- [Database](#database)
+- [Flysystem](#flysystem)
+- [Inliner](#inliner)
+- [Mail](#mail)
+- [Queue](#queue)
+- [Script](#script)
+- [Services](#services)
+- [Session](#session)
 
-## Introduction [#](#introduction)
 
-The first thing you need to do is to copy the *`.env.example`* as *`.env`* in the same root folder, modify the file on what configuration do you have.
+<a name="app"></a>
+## App
+This config holds most of the app itself, it refers to other config as well such as ``adapters``, ``services``, ``class aliases`` and ``http middlewares``.
 
-```
-...
-APP_ENV=local
-APP_DEBUG=true
-...
-```
+Let's start and review each keys, the format shows you the first key in the config, it also shows you the default and current value of that key and the type required
 
-* The `APP_ENV` is a constant variable that determines your current environment.
-  * Thus, this will be the basis to know the main __config__ folder
-* How this constant variables are generated? Try to check  the file *`<root>/config/local/app.php`* and find the *__`'debug' => env('APP_DEBUG')`__*.
-  * This means that we're getting the global configuration
-  * You can also pass a second parameter to put a default value e.g ( `env('APP_DEBUG', false)` )
-* You're asking why there is a redundant files such as `<root>/config/app.php` and `<root>/config/local/app.php`
-  * We assigned our environment to __*local*__, the process will be `local/app.php` will be loaded first before loading the base `app.php`.
+- **debug**
+(*default value:* true | boolean)
+This is the setting you will need to set-up to enable debugging on your local or staging server, and disable it when deployed under production server.
 
-## Files [#](#files)
+- **lang**
+(*default value:* en | string <folder name>)
+By default we're using **en** that refers to *english* language in which located at ``resources/lang/<folder name>``
 
-The listed files were the default configuration assigned, check their capability
+- **timezone**
+(*default value:* UTC | [timezones](http://php.net/manual/en/timezones.php))
+Timezone to use, helpful when creating records that has timestamp on it such as ``created_at``, ``updated_at`` and ``deleted_at``.
 
-#### acl.php [#](#aclphp)
-This handles the user roles, filtering classes such as CSRF, Authentication and Access.
+- **ssl**
+(*default value:* ['main' => false] | array)
+If your module supports ssl, then apply **true** on it, else **false**
 
-#### app.php [#](#appphp)
-This handles the entire application configuration such as timezone, debug, language, flsystem, mailer, services and class aliases.
+- **base_uri**
+(*default value:* ['main' => 'slayer.app'] | array)
+Set your module's base uri, this is helpful when running command line or using RESTful request
 
-#### compile.php [#](#compilephp)
-This handles the lists of Slayer classes that possibly can be combined into 1 single file, that this will really perform faster.
+- **session**
+(*default value:* en | string <name>)
+Set the session name, this refers to the name found most of the browser's resources
 
-#### consoles.php [#](#consolesphp)
-All console commands that have been listed using ``php slayer`` command are stored here.
+- **db_adapter**
+(*default value:* empty | string <adapter name>)
+Set the database adapter, base it on ``config/database.php`` under ***adapters*** key
 
-#### database.php [#](#databasephp)
-The database configurations, adapters such as MySQL, PostgreSQL, sqlite or oracle.
+- **nosql_adapter**
+(*default value:* mongo1 | string <adapter name>)
+Set the nosql adapter, base it on ``config/database.php`` under ***adapters*** key, for now phalcon only supports mongodb for now
 
-#### flysystem.php [#](#flysystemphp)
-An extensive filesystem manager that supports not such a local but also S3, Rackspace, FTP and many more [(visit flysystem website)](http://flysystem.thephpleague.com)
+- **cache_adapter**
+(*default value:* file | string <adapter name>)
+Caching helps us to determine a global or a system variables; this is also used for storing repetitive sql query, to set the adapter, base it on ``config/cache.php`` under ***adapters*** key
 
-#### inliner.php [#](#inlinerphp)
-This handles the mail inligning.
+- **queue_adapter**
+(*default value:* beanstalk | string <adapter name>)
+Queuing helps our system to handle background processes such as sending of emails and many more, to set the adapter base it on ``config/queue.php``
 
-#### path.php [#](#pathphp)
-This handles the folder path of a certain instance, such as migrations, resources, logs, sotrage, models and more.
+- **session_adapter**
+(*default value:* file | string <adapter name>)
+Sessions is a way to identify a unique requestor per browser, to set the adapter base it on ``config/session.php``
 
-#### script.php [#](#scriptphp)
-The script command that you want be running using ``php slayer run <key>``
+- **flysystem**
+(*default value:* local | string <adapter name>)
+Flysystem is a manager or an instance that follows a single interface of all this multiple adapters/services such as Local/AwsS3/Rackspace/Dropbox/Copy and many more, to set the adapter base it on ``config/flysystem.php``
 
-#### services.php [#](#servicesphp)
-This file is dedicated configuration for all vendors/services
+- **error_handler**
+(*default value:* <refer to the file> | class)
+The class that handles the thrown exceptions and fatal errors
 
-## Generating Composer [#](#generating-composer)
+- **mailer_adapter**
+(*default value:* swift | string <adapter name>)
+This mail adapter is the one handling the process or way of sending emails, to set the adapter base it on ``config/mail.php``
 
-I prefer to use ``<project>/bootstrap/generate-composer`` than modifying ``<project>/composer.json``.
+- **logging_time**
+(*default value:* hourly | <("monthly" | "daily" | "hourly") | false>)
+By default it creates a log that appends the current time with the configured value, this way it will help you to divide each logs and find the specific time you want to tail
 
-Modify the ``<project>/bootstrap/generate-composer``, the structure is written using PHP, you can ``require`` a new package, or change some properties.
+- **auth**
+(*default value:* [refer to the file] | array)
+When authenticating using the service 'auth', you can set the ``key`` to handler referrer links, on what ``model`` to use and is the ``password`` field
 
-To update your ``composer.json``, run the command using your terminal
+- **services**
+(*default value:* [refer to the file] | array)
+This handles all of our dependencies, you can create your own service, to know more please refer to this link [TODO: link to service creation](#link)
 
-    vagrant@computer: p/slayer$ php bootstrap/generate-composer
-    > Running (composer validate):
-    > ./composer.json is valid
+- **aliases**
+(*default value:* [refer to the file] | array)
+This is where you can apply an alias class to your facade class or any class you want
+
+- **middlewares**
+(*default value:* [refer to the file] | array)
+This will be your middleware classes, you can call them by adding a code like this to your controller ``$this->middleware('auth')``, to know more please refer to the controller
+
+
+
+<a name="cache"></a>
+## Cache
+
+
+<a name="consoles"></a>
+## Consoles
+
+
+<a name="database"></a>
+## Database
+
+
+<a name="flysystem"></a>
+## Flysystem
+
+
+<a name="inliner"></a>
+## Inliner
+
+
+<a name="mail"></a>
+## Mail
+
+
+<a name="queue"></a>
+## Queue
+
+
+<a name="script"></a>
+## Script
+
+
+<a name="services"></a>
+## Services
+
+
+<a name="session"></a>
+## Session

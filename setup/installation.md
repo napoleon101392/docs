@@ -1,45 +1,67 @@
-# Installation
+# Installations
 
-- [Introduction](#introduction)
-- [Phalcon Extension](#phalcon-extension)
-    - [Linux/Unix/Mac](#linux-unix-mac)
-    - [Windows](#windows)
-- [Archiving Slayer](#archiving-slayer)
-- [Next?](#next)
+- [Requirements](#requirements)
+	- [Basic](#basic-requirements)
+	- [For Queuing](#for-queuing)
+- [Project Creation](#project-creation)
+- [Dot Environment](#dot-environment)
 
-## Introduction [#](#introduction)
+<a name="requirements"></a>
+## Requirements:
 
-Installing a software or building a package will really take time, you even get an error doing that. However, the more you get an error, the more knowledge you can get.
+Before installing, there are plenty of packages that we need to install first:
+<a name="basic-requirements"></a>
+#### Basic requirements:
+  * PHP version atleast 5.5.9
+  * [Phalcon Extension](https://phalconphp.com/en/download)
+  * [Composer](https://getcomposer.org/)
+  * [cURL](https://curl.haxx.se)
+ 
+<a name="for-queuing"></a>
+#### For Queuing:
+ * You are required to install [Beanstalkd](http://kr.github.io/beanstalkd/)
 
-## Phalcon Extension [#](#phalcon-extension)
+Most of these packages are already installed on your favorite os box.
 
-The only thing that will take your time is to build the phalcon extension in which contains the entire phalcon classes.
+---
+<a name="project-creation"></a>
+## Project Creation:
 
-Read the installation process here:
-@[http://docs.phalconphp.com/en/latest/reference/install.html](https://docs.phalconphp.com/en/latest/reference/install.html)
+Using composer, you can create a new project, write this code on your terminal:
 
-#### Linux / Unix / Mac [#](#linux-unix-mac)
-@[http://phalconphp.com/en/download](http://phalconphp.com/en/download)
+```shell
+composer create-project phalconslayer/slayer --prefer-dist <folder name>
+```
+
+After running this command, there should be an output, similar below:
+
+```shell
+Installing phalconslayer/slayer (version)
+  - Installing phalconslayer/slayer (version)
+    Downloading: 100%
+
+Created project in folderName
+> php -r "copy('.env.example', '.env');"
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+```
+
+---
+<a name="dot-environment"></a>
+## Dot Environment:
+
+Let us say we have a  **local** / **staging** / **production** servers. The **local** comes with multiple ***developers***, however we don't want our developers to view those passwords or we call it "credentials", such as our production database, mail credentials, aws access token and many more.
+
+On your project we have the **.env.example**, let's copy this file and name it as **.env**. Furthermore, this file handles a global constant value, let us say we have this:
+
+```shell
+DB_HOST=192.168.10.10
+```
+
+You can access the constant value ``DB_HOST`` by using the function ``env(<constant name>, <default value>)``
+
+Try to check the file **config/database.php**, and find the ``env('DB_HOST', 'localhost')``, if there will be no value in our source, it will be based on the default value which is ``localhost``
 
 
-#### Windows [#](#windows)
-@[http://phalconphp.com/en/download/windows](http://phalconphp.com/en/download/windows)
-
-
-
-## Archiving Slayer [#](#slayer)
-
-Archiving slayer from ``github.com:phalcons/slayer.git`` is easy like you are downloading a zip file.
-
-To archive slayer into new project, run the code below using  your favorite terminal.
-
-    vagrant@computer: p/slayer$ composer create-project phalconslayer/slayer folderName --prefer-dist
-    > Installing phalconslayer/slayer (0.1.1)
-    >  - Installing phalconslayer/slayer (0.1.1)
-    >  Downloading: 100%
-
-You should be able to see the folder generated (``folderName``) in the base path where you fired the command.
-
-## Next? [#](#next)
-
-Try to read the configuration
+**Note:**
+This file is already ignored under your [***GIT Distributed Version Control***](https://git-scm.com/)

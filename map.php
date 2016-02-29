@@ -37,7 +37,7 @@ return [
 
     'Services' => [
         'Access Control Lists' => 'services/acl.md',
-        'Aliaser'              => 'services/aliaser.md',
+        'Aliases'              => 'services/aliases.md',
         'Auth'                 => 'services/auth.md',
         'Cache'                => 'services/cache.md',
         'DB'                   => 'services/db.md',
