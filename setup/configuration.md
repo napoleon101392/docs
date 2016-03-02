@@ -1,18 +1,60 @@
 # Configuration
 You can learn how to set up your application credentials, modules, services, database and many more.
 
-- [App](#app)
-- [Cache](#cache)
-- [Consoles](#consoles)
-- [Database](#database)
-- [Flysystem](#flysystem)
-- [Inliner](#inliner)
-- [Mail](#mail)
-- [Queue](#queue)
-- [Script](#script)
-- [Services](#services)
-- [Session](#session)
+- [Module](#module)
+- [Config Folder](#config-folder)
+    - [app.php](#app)
+    - [cache.php](#cache)
+    - [consoles.php](#consoles)
+    - [database.php](#database)
+    - [flysystem.php](#flysystem)
+    - [inliner.php](#inliner)
+    - [mail.php](#mail)
+    - [queue.php](#queue)
+    - [script](#script)
+    - [services.php](#services)
+    - [session.php](#session)
 
+<a name="module"></a>
+# Module
+
+<a name="config-folder"></a>
+# Config Folder
+
+The folder is located at ``project-name/config/`` directory, by default that folder is a **production** config; to over-ride the configurations you should create a new folder something like ``project-name/config/local/`` and modify your ``.env`` file and change ``APP_ENV`` to local.
+
+To call a configuration, you can use the helper ``config()``.
+
+Let's have some samples below:
+
+### Example #1:
+```php
+echo config()->app->lang;
+```
+The above code calls the instance ``config()`` helper. The ``app`` pulls the ``app.php`` file, and the ``lang`` gets the key value.
+
+### Example #2:
+```php
+$swift_config = config()->mail->swift;
+
+var_dump($swift_config);                // returns a stdClass object
+var_dump($swift_config->toArray());     // returns an array
+
+echo $swift_config->host;               // returns the host value.
+echo $swift_config->toArray()['host'];  // returns the same value but it is an index call
+```
+The above code shows that if a key has an array value, it will return an object. While you have an option to turn it to an array by calling the function ``toArray()``.
+
+### Example #3:
+```php
+echo config()->database->adapters->mysql->host;
+```
+The above code shows a multi chain object call, if we will extract the process:
+- calls ``config()`` instance
+- getting ``database.php`` file
+- calling key 'adapters'
+- calling key 'mysql'
+- getting the value of this key 'host'
 
 <a name="app"></a>
 ## App
