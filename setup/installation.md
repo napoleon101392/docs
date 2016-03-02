@@ -1,5 +1,6 @@
-# Installations
+# Installation
 
+## Index:
 - [Requirements](#requirements)
 	- [Basic](#basic-requirements)
 	- [For Queuing](#for-queuing)

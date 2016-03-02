@@ -1,6 +1,7 @@
 # Configuration
 You can learn how to set up your application credentials, modules, services, database and many more.
 
+## Index:
 - [Module](#module)
 - [Config Folder](#config-folder)
     - [app.php](#app)
