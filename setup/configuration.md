@@ -1,9 +1,9 @@
 # Configuration
 You can learn how to set up your application credentials, modules, services, database and many more.
 
-## Index:
-- [Module](#module)
-- [Config Folder](#config-folder)
+- [app/modules.php](#module)
+- [bootstrap/path.php](#path)
+- [config/](#config-folder)
     - [app.php](#app)
     - [cache.php](#cache)
     - [consoles.php](#consoles)
@@ -16,25 +16,44 @@ You can learn how to set up your application credentials, modules, services, dat
     - [services.php](#services)
     - [session.php](#session)
 
+
+
 <a name="module"></a>
 # Module
+
+To inject a new module, open ``project-name/app/modules.php``. By default, we have the **main** and **acme** written on it.
+
+It acts like a different project, but it handles the same resources/components/configurations.
+
+To learn more about this, [click here to redirect](/docs/mvc-module).
+
+
+
+<a name="path"></a>
+# Path
+
+Most of slayer core classes uses the paths that is located at ``project-name/bootstrap/path.php``.
+
+**Tips:** Onload, path is already registered under ``config()->path``
+
+
+----
+
 
 <a name="config-folder"></a>
 # Config Folder
 
 The folder is located at ``project-name/config/`` directory, by default that folder is a **production** config; to over-ride the configurations you should create a new folder something like ``project-name/config/local/`` and modify your ``.env`` file and change ``APP_ENV`` to local.
 
-To call a configuration, you can use the helper ``config()``.
+To call a configuration, you can use the helper ``config()``, let's have some samples below.
 
-Let's have some samples below:
-
-### Example #1:
+## Example #1:
 ```php
-echo config()->app->lang;
+echo config()->app->lang; // returns 'en'
 ```
-The above code calls the instance ``config()`` helper. The ``app`` pulls the ``app.php`` file, and the ``lang`` gets the key value.
+The above code calls the instance ``config()`` helper. The ``app`` pulls the ``app.php`` file, and getting the key ``lang`` that returns a string value.
 
-### Example #2:
+## Example #2:
 ```php
 $swift_config = config()->mail->swift;
 
@@ -46,7 +65,7 @@ echo $swift_config->toArray()['host'];  // returns the same value but it is an i
 ```
 The above code shows that if a key has an array value, it will return an object. While you have an option to turn it to an array by calling the function ``toArray()``.
 
-### Example #3:
+## Example #3:
 ```php
 echo config()->database->adapters->mysql->host;
 ```
@@ -57,8 +76,12 @@ The above code shows a multi chain object call, if we will extract the process:
 - calling key 'mysql'
 - getting the value of this key 'host'
 
+
+----
+
+
 <a name="app"></a>
-## App
+## app.php
 This config holds most of the app itself, it refers to other config as well such as ``adapters``, ``services``, ``class aliases`` and ``http middlewares``.
 
 Let's start and review each keys, the format shows you the first key in the config, it also shows you the default and current value of that key and the type required
@@ -86,41 +109,119 @@ Let's start and review each keys, the format shows you the first key in the conf
 | **middlewares**     | `refer to the file`           | array                                                      | This will be your middleware classes, you can call them by adding a code like this to your controller ``$this->middleware('auth')``, to know more please refer to the controller                                                     |
 
 
+----
+
+
 <a name="cache"></a>
-## Cache
+## cache.php
+
+By default in the table shows that we're using ***file*** as our cache adapter.
+
+You could define your own adapter by creating a new set of array. Currently, we have **file**, **redis**, **memcache**, **mongo**, **apc**, **xcache**.
+
+There is a **backend** that refers to the internal process when handling cache data, there is also **frontend** that translate the return cached values.
+
+To learn more about caching, <a href="#">click here.</a>
+
+
+----
 
 
 <a name="consoles"></a>
-## Consoles
+## consoles.php
+
+The Brood Console helps us to generate files such as modules/controllers, running mail template inliner, applying database migrations, queuing and many more.
+
+All the listed classes will be registered upon running ``php brood``.
+
+To learn more about console, <a href="#">click here.</a>
+
+
+----
 
 
 <a name="database"></a>
-## Database
+## database.php
+
+This file handles a relational database, document oriented database and the [phinx migrations](https://github.com/robmorgan/phinx).
+
+**relational database:**
+There is a ***class*** that refers to the adapter to be used when instantiating your models under ``project-name/components/Models/``.
+
+**document oriented database:**
+Currently Phalcon itself only supports MongoDB and the collection mapper is located at ``project-name/components/Collection``.
+
+**phinx migrations:**
+We're using Phinx as our database migration tool that currently works under relational database.
+
+To learn more about these:
+- Object Relational Mapper
+- Object Document Mapper
+- Phinx Migrations
+
+
+----
 
 
 <a name="flysystem"></a>
-## Flysystem
+## flysystem.php
+
+Initially we're using [Flysystem](https://github.com/thephpleague/flysystem) as our filesystem that supports multiple adapters such as S3, Rackspace, Dropbox, Copy and many more.
+
+To learn more, <a href="#">you may click here.</a> 
+
+
+----
 
 
 <a name="inliner"></a>
-## Inliner
+## inliner.php
+
+You're building email templates and those templates only supports inline css, we just want to say, we have this inliner that converts your volt templates into an inline volt file.
+
+We have this default config inside the file.
+```php
+    'registered' => [
+
+        'file' => 'emails/registered',
+        'css'  => [
+            public_path('css/bootstrap.min.css'),
+        ],
+    ],
+```
+
+You can try to run ``php brood mail:inliner``, the **registered.volt** will be copied and converted as **registered-inlined.volt**
+
+----
 
 
 <a name="mail"></a>
-## Mail
+## mail.php
+
+
+----
 
 
 <a name="queue"></a>
-## Queue
+## queue.php
+
+
+----
 
 
 <a name="script"></a>
-## Script
+## script.php
+
+
+----
 
 
 <a name="services"></a>
-## Services
+## services.php
+
+
+----
 
 
 <a name="session"></a>
-## Session
+## session.php
