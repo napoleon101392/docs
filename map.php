@@ -2,21 +2,21 @@
 
 return [
 
-    'Prologue' => [
-        'Contribution Guide' => 'prologue/contribution_guide.md',
-        'API Documentation'  => 'prologue/api_documentation.md',
-    ],
+    // 'Prologue' => [
+    //     'Contribution Guide' => 'prologue/contribution_guide.md',
+    //     'API Documentation'  => 'prologue/api_documentation.md',
+    // ],
 
     'Setup' => [
         'Installation'  => 'setup/installation.md',
         'Configuration' => 'setup/configuration.md',
     ],
 
-    'MMVC' => [
-        'Controller'    => 'mmvc/controller.md',
-        'Model'         => 'mmvc/model.md',
-        'Module'        => 'mmvc/module.md',
-        'View'          => 'mmvc/view.md',
+    'Modular-MVC' => [
+        'Module'        => 'mvc/module.md',
+        'Controller'    => 'mvc/controller.md',
+        'View'          => 'mvc/view.md',
+        'Model'         => 'mvc/model.md',
     ],
 
     'Supporting Structure' => [
