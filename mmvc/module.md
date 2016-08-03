@@ -1,6 +1,6 @@
 # Module
 **<a href="http://google.com/search?q=what+is+module" target="_blank">What is module all about?</a>**
-In real world scenarios, we're building applications that communicates or uses the same resources, most probably you're building a large web application that must be divided into a different module, such as ``admin``, ``mail sender``, ``integrated social network``, ``paypal service or similar``, ``aws service`` and many more.
+In real world scenarios, we're building applications that communicates or uses the same resources, most probably you're building a large web application that must be divided into a different module, such as ``admin``, ``white label``, ``social network manager``, ``online payment manager`` and anything you think you must separate it from your current module.
 
 
 ## Index:
@@ -23,7 +23,8 @@ There must be generated directory and files, base it to these locations:
 - project-name/public/admin.php
 
 We must register our module on a manual way, write this to the file located at ``project-name/app/modules.php``.
-```php
+
+``` php 
 return [
     # some array of modules above
 
@@ -73,6 +74,7 @@ class AdminServiceProvider extends ServiceProvider
 }
 ```
 
+
 The above code shows you how to include your module by calling ``di()->get('module')->setModule(<name>, <closure>)``
 
 Let's register this class as our service, go to ``project-name/config/app.php`` and find ``services``, include your class.
@@ -87,7 +89,7 @@ return [
 
         Popeye\Admin\AdminServiceProvider::class,
     ],
-
+    
     # some code below
 ];
 ```

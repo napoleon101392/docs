@@ -3,8 +3,8 @@ You can learn how to install phalcon slayer, how to initially setup your environ
 
 ## Index:
 - [Requirements](#requirements)
-	- [Basic](#basic-requirements)
-	- [For Queuing](#for-queuing)
+    - [Basic](#basic-requirements)
+    - [For Queuing](#for-queuing)
 - [Project Creation](#project-creation)
 - [Dot Environment](#dot-environment)
 - [Web Server](#web-server)
@@ -27,6 +27,7 @@ Before installing, there are plenty of packages that we need to install first:
 Most of these packages are already installed on your favorite os box.
 
 ---
+
 <a name="project-creation"></a>
 # Project Creation:
 
@@ -50,12 +51,13 @@ Installing dependencies (including require-dev)
 ```
 
 ---
+
 <a name="dot-environment"></a>
 # Dot Environment:
 
 Let us say we have a  **local** / **staging** / **production** servers. The **local** comes with multiple ***developers***, however we don't want our developers to view those passwords or we call it "credentials", such as our production database, mail credentials, aws access token and many more.
 
-On your project we have the **.env.example**, let's copy this file and name it as **.env**. Furthermore, this file handles a global constant value, let us say we have this:
+On your project we have the "**.env.example**", let's copy this file and name it as "**.env**". Furthermore, this file handles a global constant value, let us say we have this:
 
 ```shell
 DB_HOST=192.168.10.10
@@ -79,6 +81,7 @@ Slayer has configurations for Apache2 and NginX, it is located at:
 we have an example **slayer.app** file for both web server, you could copy the file and put it in your web server **sites-available** or you could apply a Symlink.
 
 Let us say we have an NginX under UbuntuOS:
+
 ```shell
 cd /etc/nginx/sites-enabled/
 ln -s ../../../var/www/phalconslayer/slayer/storage/etc/nginx/sites-available/slayer.app
@@ -90,11 +93,13 @@ The command above shows that you must be located at the nginx **sites-enabled** 
 Add a domain on your ``/etc/hosts`` file and point it to your local IP, you should be able now to access your website.
 
 To check that, you can try this cURL command:
+
 ```shell
 curl -v -s slayer.app 1> /dev/null
 ```
 
 The curl command above must return this kind of format:
+
 ```shell
 * Connected to slayer.app (192.168.10.10) port 80 (#0)
 > GET / HTTP/1.1

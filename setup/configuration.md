@@ -28,13 +28,15 @@ It acts like a different project, but it handles the same resources/components/c
 To learn more about this, [click here to redirect](/docs/mvc-module).
 
 
+----
+
 
 <a name="path"></a>
 # Path
 
 Most of slayer core classes uses the paths that is located at ``project-name/bootstrap/path.php``.
 
-**Tips:** Onload, path is already registered under ``config()->path``
+**Note:** Onload, path is already registered under ``config()->path``
 
 
 ----
@@ -198,6 +200,7 @@ You can try to run ``php brood mail:inliner``, the **registered.volt** will be c
 <a name="mail"></a>
 ## mail.php
 
+To learn how to send an email, <a href="#">you may click here</a>
 
 ----
 

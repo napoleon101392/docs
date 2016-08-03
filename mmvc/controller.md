@@ -53,6 +53,9 @@ Route::any('/delete/{id}', [
 |``POST``      | /update/1    |The ``TicketController`` will be instantiated and the function ``update($id)`` will be called      |
 |``GET`` or ``POST``       | /delete/1    |The ``TicketController`` will be instantiated and the function ``delete($id)`` will be called      |
 
+The above table shows you how the request and uri processes along the Controller class. <a target="_blank" href="/docs/supporting-structure-routing">To know more about routing, click here.</a>
+
+
 ---
 
 <a name="middleware"></a>

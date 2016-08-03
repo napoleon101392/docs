@@ -1,0 +1,12 @@
+{
+    "name": "phalconslayer/docs",
+    "description": "S.Layer's Documentation",
+    "authors": [
+        {
+            "name": "Daison Carino",
+            "email": "daison12006013@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
