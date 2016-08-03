@@ -1,9 +1,6 @@
-# Documentations
+# S.Layer's Documentation
 
-This package is still on going, currently having a heavy updates.
+To generate this, you must run ``php vendor/bin/pure-themer``` and that will auto compile things up, the template is currently on development.
 
-We're currently relying on readme.io docs.
+But basically you can reach the documentation here as an alternative way to access it <a href="https://phalconslayer.readme.io">https://phalconslayer.readme.io</a>
 
-This is temporary for now, to reach the documentation:
-
-<a href="https://phalconslayer.readme.io">(Click Here) https://phalconslayer.readme.io</a>
