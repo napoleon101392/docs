@@ -7,6 +7,9 @@
             "email": "daison12006013@gmail.com"
         }
     ],
+    "license": "MIT",
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "php-pure/themer": "0.1.*"
+    }
 }
