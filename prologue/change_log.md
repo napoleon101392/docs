@@ -1,11 +1,9 @@
-# Change Log
-
 Every changes on our code, we should logged it here for future reference.
 
 
 ---
 
-Version 1.3.0:
+###Version 1.3.0:
 - Added acceptance testing using Behat/Mink
 - Fixed Slayer Command
 - Disabled _get instead to support REQUEST_URI on Route Service
@@ -18,7 +16,7 @@ Version 1.3.0:
 ---
 
 
-Version 1.2.1:
+###Version 1.2.1:
 - Added Module Service
 - Added Clear Compiled console command
 - Removed other storage paths
@@ -27,7 +25,7 @@ Version 1.2.1:
 ---
 
 
-Version 1.2.0:
+###Version 1.2.0:
 - Added getter functions access to protected properties in models
 - Changed and Fixed the middlewares
 - Removed getClient() and the client Interface in the flysystem
@@ -43,7 +41,7 @@ Version 1.2.0:
 ---
 
 
-Version 1.0.1:
+###Version 1.0.1:
 - Added cache drivers
 - Fixed psr style
 - Fixed base route
@@ -51,7 +49,7 @@ Version 1.0.1:
 
 ---
 
-Version 1.0.0:
+###Version 1.0.0:
 - Fixed Blade Adapter
 - Added Faker Package for db:seed command
 - Fixed the looping part for services

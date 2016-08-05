@@ -1,8 +1,6 @@
-# Routing
-
 You've probably learned how to use [Controller](doc:mvc-controller)? Let's try on how explicitly create a route for your modules.
 
-Routing is the place where you define how the system interact with the **URL** requests. Let's assume we have this page to login ``example.app/login``.
+Routing is the place where you define how the system interact with the **URL** requests. Let's assume we have this page to login `example.app/login`.
 
 ## Advisable to know these firsts:
 - <a target="_blank" href="/docs/mvc-module">Module</a>
@@ -19,8 +17,8 @@ Routing is the place where you define how the system interact with the **URL** r
 <a name="basic-usage"></a>
 # Basic Usage
 under your **project-name/app/main/routes.php**, let's add this:
+
 ```php
-<?php
 
 route()->addGet('login', [
     'controller' => 'Auth',
@@ -28,13 +26,13 @@ route()->addGet('login', [
 ]);
 ```
 
-The above code shows how to create a ``GET`` request, the first parameter is the ```/login``` uri, and if you will be attempting to visit the page ```example.app/login```, the dispatcher will analyze the request **URI**, if found a match, let us say it matches the route above.
+The above code shows how to create a `GET` request, the first parameter is the ```/login``` uri, and if you will be attempting to visit the page ```example.app/login```, the dispatcher will analyze the request **URI**, if found a match, let us say it matches the route above.
 
-The second parameter comes in, which we point it to ``Auth`` controller and the function ``showLogin`` will be called.
+The second parameter comes in, which we point it to `Auth` controller and the function `showLogin` will be called.
 
 Go to **project-name/app/main/controllers/AuthController.php** and write the function like below:
+
 ```php
-<?php
 namespace App\Main\Controllers;
 
 class AuthController extends Controller
@@ -46,7 +44,7 @@ class AuthController extends Controller
 }
 ```
 
-The above code will be triggered once the url is visited, then we call the ``view()`` function to show our template engine file.
+The above code will be triggered once the url is visited, then we call the `view()` function to show our template engine file.
 
 
 ---
@@ -67,7 +65,6 @@ route()->addGet('users/{id}/edit', [
 and here is the controller sample
 
 ```php
-<?php
 
 namespace App\Main\Controllers;
 
@@ -81,9 +78,9 @@ class UserController extends Controller
 }
 ```
 
-The above codes show how to handle url values, so attempting to run this url to your browser ``example.app/users/1/edit``.
+The above codes show how to handle url values, so attempting to run this url to your browser `example.app/users/1/edit`.
 
-It should die-and-dump the ``$id`` which value is **1**.
+It should die-and-dump the `$id` which value is **1**.
 
 
 ---
@@ -92,9 +89,9 @@ It should die-and-dump the ``$id`` which value is **1**.
 <a name="naming-route"></a>
 # Naming Route
 
-Let's extend more about the ``login`` uri by adding **addPost** also.
+Let's extend more about the `login` uri by adding **addPost** also.
 
-Add a ``setName(<name>)`` chain on it.
+Add a `setName(<name>)` chain on it.
 
 ```php
 route()->addPost('login', [
@@ -103,7 +100,7 @@ route()->addPost('login', [
 ])->setName('attemptLogin');
 ```
 
-In your ``controller`` or ``view``, you may call the function ``route('showLogin')`` to return the full url.
+In your `controller` or `view`, you may call the function `route('showLogin')` to return the full url.
 
 ```php
 // ...
@@ -126,7 +123,7 @@ class ... extends ...
 
 The code above shows how to get the full url by just getting the route name.
 
-How about the route ``users/{id}/edit``, let's inject a name **userEdit** in it, and call it this way by providing the ``id`` in the second parameter.
+How about the route `users/{id}/edit`, let's inject a name **userEdit** in it, and call it this way by providing the `id` in the second parameter.
 
 ```php
 echo route('userEdit', [
@@ -134,7 +131,7 @@ echo route('userEdit', [
 ]);
 ```
 
-It must return ``example.app/users/100/edit``.
+It must return `example.app/users/100/edit`.
 
 
 ---
@@ -144,8 +141,8 @@ It must return ``example.app/users/100/edit``.
 # Route Group
 
 Route group is much more cleaner to use if you want to separate a scope into a class registrar 
-- having a url like this ``http://example/users/../..`` into **UsersRoute** class
-- as well ``http://example/auth/..`` into **AuthRoute** class
+- having a url like this `http://example/users/../..` into **UsersRoute** class
+- as well `http://example/auth/..` into **AuthRoute** class
 
 Run this to your console:
 ```shell
@@ -162,7 +159,6 @@ The above command generates a **UsersRoutes.php** inside your ***main*** module.
 Go to **project-name/app/main/routes/UserRoutes.php**, open the file, you should have this defined values.
 
 ```php
-<?php
 namespace App\Main\Routes;
 
 class UsersRoutes extends RouteGroup
@@ -211,9 +207,9 @@ route()->mount(new App\Main\Routes\UsersRoutes);
 ```
 
 
-Create the ``UsersController`` at ``project-name/app/main/controllers`` or execute the brood console command instead.
+Create the `UsersController` at `project-name/app/main/controllers` or execute the brood console command instead.
+
 ```php
-<?php
 namespace App\Main\Controllers;
 
 class UsersController extends Controller

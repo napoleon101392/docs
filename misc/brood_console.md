@@ -1,5 +1,3 @@
-# Brood Console
-
 We have a console tool called "brood" that provides scaffolding, database migrations and many more.
 
 
@@ -74,11 +72,11 @@ You can create your own console command by executing this to your console
 $ php brood make:console <name>
 ```
 
-This command generates a ***php*** class file, located at ``project-name/components/Console/<name>.php
+This command generates a ***php*** class file, located at `project-name/components/Console/<name>.php
 
-In your class, there is ``$name`` and ``$description``, change it to allow brood to organize the commands, register your console located at ``project-name/config/consoles.php``.
+In your class, there is `$name` and `$description`, change it to allow brood to organize the commands, register your console located at `project-name/config/consoles.php`.
 
-Run ``php brood``, the assigned ``$name`` must be listed there.
+Run `php brood`, the assigned `$name` must be listed there.
 
 
 ---
@@ -94,11 +92,11 @@ This handles the calls when executing your console
 
 # Arguments
 
-This part requires an argument to be passed in, let's assume running ``php brood make:console <name>`` means having the ``<name>`` as an argument.
+This part requires an argument to be passed in, let's assume running `php brood make:console <name>` means having the `<name>` as an argument.
 
 The sample in the generated has a multidimensional array, so you can have multiple arguments to be called.
 
-The inside array's first index is the **title** you want to describe, and to get the inserted value you should call ``$this->input->getArgument('title');``
+The inside array's first index is the **title** you want to describe, and to get the inserted value you should call `$this->input->getArgument('title');`
 
 The array's second index is the mode of the argument, you can check the lists of available mode
 
@@ -116,11 +114,11 @@ The array's third index is the argument's description
 
 # Options
 
-This part is an optional to passed in, most commands has double slashes such as ``--help`` or ``--verbose`` those are the options calls.
+This part is an optional to passed in, most commands has double slashes such as `--help` or `--verbose` those are the options calls.
 
 The sample in the generated has the same multidimensional array, which you could also have a multi options to be called.
 
-The inside array's first index is the **title** as well which will be triggered when calling ``--<title>``, to get the passed value once the command executed, you could call this ``$this->input->getOption('title');``
+The inside array's first index is the **title** as well which will be triggered when calling `--<title>`, to get the passed value once the command executed, you could call this `$this->input->getOption('title');`
 
 The second index is the shortcut, maybe you wan't to make it as **t** that refers as the **title**.
 
@@ -135,7 +133,7 @@ The third index is the option, below is the lists of available options
 
 The fourth is the description of your option
 
-and The fifth by default is ``null`` which you could pass a value
+and The fifth by default is `null` which you could pass a value
 
 
 ---

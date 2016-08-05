@@ -1,5 +1,3 @@
-# Contribution Guide
-
 We priorities your concerns, you could also contribute to us, you may
 - [create an issue](https://github.com/phalconslayer/framework/issues/new)
 - [discuss some new features](/discuss-new)

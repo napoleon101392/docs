@@ -1,4 +1,3 @@
-# Installation
 You can learn how to install phalcon slayer, how to initially setup your environment.
 
 ## Index:
@@ -63,9 +62,9 @@ On your project we have the "**.env.example**", let's copy this file and name it
 DB_HOST=192.168.10.10
 ```
 
-You can access the constant value ``DB_HOST`` by using the function ``env(<constant name>, <default value>)``
+You can access the constant value `DB_HOST` by using the function `env(<constant name>, <default value>)`
 
-Try to check the file **config/database.php**, and find the ``env('DB_HOST', 'localhost')``, if there will be no value in our source, it will be based on the default value which is ``localhost``
+Try to check the file **config/database.php**, and find the `env('DB_HOST', 'localhost')`, if there will be no value in our source, it will be based on the default value which is `localhost`
 
 
 **Note:**
@@ -88,9 +87,9 @@ ln -s ../../../var/www/phalconslayer/slayer/storage/etc/nginx/sites-available/sl
 sudo service nginx restart
 ```
 
-The command above shows that you must be located at the nginx **sites-enabled** and you must call the command ``ln -s`` to apply symlink. We've also restarted the nginx server.
+The command above shows that you must be located at the nginx **sites-enabled** and you must call the command `ln -s` to apply symlink. We've also restarted the nginx server.
 
-Add a domain on your ``/etc/hosts`` file and point it to your local IP, you should be able now to access your website.
+Add a domain on your `/etc/hosts` file and point it to your local IP, you should be able now to access your website.
 
 To check that, you can try this cURL command:
 

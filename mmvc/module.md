@@ -1,6 +1,5 @@
-# Module
 **<a href="http://google.com/search?q=what+is+module" target="_blank">What is module all about?</a>**
-In real world scenarios, we're building applications that communicates or uses the same resources, most probably you're building a large web application that must be divided into a different module, such as ``admin``, ``white label``, ``social network manager``, ``online payment manager`` and anything you think you must separate it from your current module.
+In real world scenarios, we're building applications that communicates or uses the same resources, most probably you're building a large web application that must be divided into a different module, such as `admin`, `white label`, `social network manager`, `online payment manager` and anything you think you must separate it from your current module.
 
 
 ## Index:
@@ -11,7 +10,7 @@ In real world scenarios, we're building applications that communicates or uses t
 <a name="basic-usage"></a>
 # Basic Usage
 
-Let us say, we want an ``admin`` module.
+Let us say, we want an `admin` module.
 
 Run this to your console:
 ```
@@ -22,7 +21,7 @@ There must be generated directory and files, base it to these locations:
 - project-name/app/admin/
 - project-name/public/admin.php
 
-We must register our module on a manual way, write this to the file located at ``project-name/app/modules.php``.
+We must register our module on a manual way, write this to the file located at `project-name/app/modules.php`.
 
 ``` php 
 return [
@@ -34,16 +33,15 @@ return [
 ];
 ```
 
-We called the service ``dispatcher``, we've changed the default namespace to understand the namespace of our controller, this also helps the modules' router to be configured automatically.
+We called the service `dispatcher`, we've changed the default namespace to understand the namespace of our controller, this also helps the modules' router to be configured automatically.
 
-Setup your **Apache2** or **NginX** to point at ``project-name/public/admin.php`` and we're done! That's too simple, isn't it? Let's try below section as an alternative way.
+Setup your **Apache2** or **NginX** to point at `project-name/public/admin.php` and we're done! That's too simple, isn't it? Let's try below section as an alternative way.
 
 
 <a name="alternative-service"></a>
 # Alternative as a Service
 
 ```php
-<?php
 namespace Popeye\Admin;
 
 use Phalcon\Di\FactoryDefault;
@@ -75,9 +73,9 @@ class AdminServiceProvider extends ServiceProvider
 ```
 
 
-The above code shows you how to include your module by calling ``di()->get('module')->setModule(<name>, <closure>)``
+The above code shows you how to include your module by calling `di()->get('module')->setModule(<name>, <closure>)`
 
-Let's register this class as our service, go to ``project-name/config/app.php`` and find ``services``, include your class.
+Let's register this class as our service, go to `project-name/config/app.php` and find `services`, include your class.
 
 ```php
 return [

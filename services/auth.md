@@ -1,11 +1,8 @@
-# Auth
+This provider helps us to have an access to this class `Clarity\Support\Auth\Auth`
 
-This provider helps us to have an access to this class ``Clarity\Support\Auth\Auth``
+The sample module `main` uses some of the defined functions, such as:
 
-The sample module ``main`` uses some of the defined functions, such as:
 ```php
-<?php
-
 $auth = di()->get('auth');
 
 
@@ -35,4 +32,4 @@ $auth->user();
 $auth->destroy();
 ```
 
-This provider determines your config ``project-name/config/app.php`` under ``auth`` key
+This provider determines your config `project-name/config/app.php` under `auth` key

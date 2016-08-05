@@ -1,5 +1,3 @@
-# Collection
-
 The collection acts as a document mapper for NoSQL.
 
 ## Index:
@@ -14,7 +12,7 @@ The collection acts as a document mapper for NoSQL.
 <a name="configuration"></a>
 # Configuration
 
-This component relies on ``config/database.php`` under ``nosql_adapters`` key
+This component relies on `config/database.php` under `nosql_adapters` key
 
 ```php
 'nosql_adapters' => [
@@ -43,7 +41,7 @@ php brood make:collection TicketLogs
 >    Collection has been created!
 ```
 
-The above code will generate a file containing a class that acts as our collection model, located at ``project-name/components/Collection/TicketLogs.php``.
+The above code will generate a file containing a class that acts as our collection model, located at `project-name/components/Collection/TicketLogs.php`.
 
 ---
 

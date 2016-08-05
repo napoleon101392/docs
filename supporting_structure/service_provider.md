@@ -1,5 +1,3 @@
-# Service Provider
-
 We're building applications that has a single purpose in which it must be separated under your underlying app.
 
 This page helps you to create your own service, or helps you on how to handle a service.
@@ -39,11 +37,10 @@ Now manage your composer, write the essential things. Upon doing that you might 
     }
 ```
 
-Run the initial ``composer dumpautoload`` so that it will register as a psr4, it interprets your ``src/`` folder having this namespace ``MySlayerAgent\Agent``. Let's create a class name it as ***AgentServiceProvider***
+Run the initial `composer dumpautoload` so that it will register as a psr4, it interprets your `src/` folder having this namespace `MySlayerAgent\Agent`. Let's create a class name it as ***AgentServiceProvider***
 
 ```php
 // root-folder/src/AgentServiceProvider.php
-<?php
 namespace MySlayerAgent\Agent;
 
 use Jenssegers\Agent\Agent;
@@ -61,9 +58,9 @@ class AgentServiceProvider extends ServiceProvider
 }
 ```
 
-Register this clas inside ``project-name/config/app.php`` under ``services``, as **MySlayerAgent\Agent\AgentServiceProvider::class**
+Register this clas inside `project-name/config/app.php` under `services`, as **MySlayerAgent\Agent\AgentServiceProvider::class**
 
-The above class will be injected as dependency using the alias ``agent``, the register() function returns an instance of ``\Jenssegers\Agent\Agent`` in which you can call using the ``di()`` function.
+The above class will be injected as dependency using the alias `agent`, the register() function returns an instance of `\Jenssegers\Agent\Agent` in which you can call using the `di()` function.
 
 ```php
 di()->get('agent')->is('Windows');
@@ -83,7 +80,6 @@ You could even create your own facade.
 
 ```php
 // root-folder/src/AgentFacade.php
-<?php
 namespace MySlayerAgent\Agent;
 
 use Clarity\Facades\Facade;
@@ -97,7 +93,7 @@ class AgentFacade extends Facade
 }
 ```
 
-Register it as well at ``app.php`` config as ``'Agent' => MySlayerAgent\Agent\AgentFacade::class``
+Register it as well at `app.php` config as `'Agent' => MySlayerAgent\Agent\AgentFacade::class`
 
 Now you can easily call it through this
 
@@ -121,7 +117,7 @@ Now you can easily call it through this
 <a name="relying-service"></a>
 # Relying on a Service
 
-To rely on other services, there is a ``boot()`` function that you could call.
+To rely on other services, there is a `boot()` function that you could call.
 
 ```php
     public function boot()
@@ -131,9 +127,10 @@ To rely on other services, there is a ``boot()`` function that you could call.
     }
 ```
 
-There is also an example, find ``project-name/components/Providers/``, check the ``Application.php`` and ``Dispatcher.php``, we call the dependency injection itself to create an event.
+There is also an example, find `project-name/components/Providers/`, check the `Application.php` and `Dispatcher.php`, we call the dependency injection itself to create an event.
 
 ***Application.php:***
+
 ```php
     public function boot()
     {
@@ -155,7 +152,7 @@ There is also an example, find ``project-name/components/Providers/``, check the
 
 So you have files that you want to import from the root path of your project. There is an option to do that.
 
-Under ``boot()`` function, you can call the ``publish(<array folders>, <tag name>)`` command.
+Under `boot()` function, you can call the `publish(<array folders>, <tag name>)` command.
 
 ```php
     public function boot()
@@ -170,7 +167,7 @@ Under ``boot()`` function, you can call the ``publish(<array folders>, <tag name
     }
 ```
 
-The above code shows, on how you could publish your folders. Try to run this on your console. Here's the console format ``php brood vendor:publish <provider alias>``, and there is a *tag* option.
+The above code shows, on how you could publish your folders. Try to run this on your console. Here's the console format `php brood vendor:publish <provider alias>`, and there is a *tag* option.
 
 ```php
 php brood vendor:publish popeye
@@ -178,7 +175,8 @@ php brood vendor:publish popeye
 
 The above console command will iterate all the registered tags and requires you to confirm one-by-one.
 
-To make a specific publish, you can add ``--tag`` in the command
+To make a specific publish, you can add `--tag` in the command
+
 ```php
 php brood vendor:publish popeye --tag=dist
 ```

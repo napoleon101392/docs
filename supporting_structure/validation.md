@@ -1,10 +1,8 @@
-# Validation
-
 We definitely have something we need to validate before executing script going to other 3rd party resources such as sql server.
 
 We validate data to match our needs.
 
-The class **Phalcon\Validation** will do the job; We have sample validation classes in our ``project-name/components/Validation``
+The class **Phalcon\Validation** will do the job; We have sample validation classes in our `project-name/components/Validation`
 
 
 ---
@@ -13,7 +11,6 @@ The class **Phalcon\Validation** will do the job; We have sample validation clas
 ## Creating Class Validator
 
 ```php
-<?php
 ...
 
 class JustAnotherValidator extends Validator
@@ -113,7 +110,6 @@ The lists below are available and mostly used by several developers, you could u
 You can create your own validation class to extend more or to suit your needs.
 
 ```php
-<?php
 
 use Phalcon\Validation\Message;
 use Phalcon\Validation\Validator;
