@@ -1,5 +1,5 @@
 /vendor/
-/.docs-compiled/
+/public/*.html
 /views/.cache/
 !/views/.cache/.gitkeep
 composer.lock
