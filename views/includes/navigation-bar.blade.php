@@ -8,14 +8,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <a class="navbar-brand" href="#">S.layer</a>
+            <a class="navbar-brand" href="http://phalconslayer.com">S.layer</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-link active-slayer"><a href="#">Documentation</a></li>
+                <li class="nav-link active-slayer"><a href="http://docs.phalconslayer.com">Documentation</a></li>
                 <li class="nav-link"><a href="#">Forum</a></li>
                 <li>
                     <form class="navbar-form navbar-left">
