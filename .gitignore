@@ -1,3 +1,4 @@
+/.rocketeer/
 /vendor/
 /public/*.html
 /views/.cache/
