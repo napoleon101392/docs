@@ -1,0 +1,5 @@
+/.rocketeer/
+/vendor/
+/public/*.html
+composer.lock
+.DS_Store
