@@ -1,4 +1,3 @@
-/.rocketeer/
 /vendor/
 /public/*.html
 composer.lock
