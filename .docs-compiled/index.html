@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Installation - Solid Layer Documentation</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../.docs-compiled/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../.docs-compiled/assets/css/slayer.css">
+  </head>
+  <body>
+    <nav class="navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">S.layer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-link active-slayer"><a href="#">Documentation</a></li>
+                <li class="nav-link"><a href="#">Forum</a></li>
+                <li>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>    <div class="container">
+      <div class="row">
+        <div class="col-md-3 version">
+          <div class="btn-group">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    v1.4.0 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">v1.4.1</a></li>
+    <li><a href="#">v1.4.2</a></li>
+    <li><a href="#">v1.4.3</a></li>
+    <li><a href="#">v1.4.4</a></li>
+  </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            <h1>Installation</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sidebar col-md-3">
+            <ul class="sidebar-level-1"><li class="menu-level-1"><div class="nav-menu-title">Prologue</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="prologue-change-log.html">Change Log</a></li><li class="menu-level-2"><a href="prologue-contribution-guide.html">Contribution Guide</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Setup</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="index.html">Installation</a></li><li class="menu-level-2"><a href="setup-configuration.html">Configuration</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Modular-MVC</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="modular-mvc-module.html">Module</a></li><li class="menu-level-2"><a href="modular-mvc-controller.html">Controller</a></li><li class="menu-level-2"><a href="modular-mvc-view.html">View</a></li><li class="menu-level-2"><a href="modular-mvc-model.html">Model</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Supporting Structure</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="supporting-structure-error-handler.html">Error Handler</a></li><li class="menu-level-2"><a href="supporting-structure-routing.html">Routing</a></li><li class="menu-level-2"><a href="supporting-structure-sandbox.html">Sandbox</a></li><li class="menu-level-2"><a href="supporting-structure-service-provider.html">Service Provider</a></li><li class="menu-level-2"><a href="supporting-structure-storage.html">Storage</a></li><li class="menu-level-2"><a href="supporting-structure-unit-testing.html">Unit Testing</a></li><li class="menu-level-2"><a href="supporting-structure-validation.html">Validation</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Services</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="services-aliases.html">Aliases</a></li><li class="menu-level-2"><a href="services-auth.html">Auth</a></li><li class="menu-level-2"><a href="services-cache.html">Cache</a></li><li class="menu-level-2"><a href="services-db.html">DB</a></li><li class="menu-level-2"><a href="services-dispatcher.html">Dispatcher</a></li><li class="menu-level-2"><a href="services-filter.html">Filter</a></li><li class="menu-level-2"><a href="services-flash.html">Flash</a></li><li class="menu-level-2"><a href="services-flashbag.html">FlashBag</a></li><li class="menu-level-2"><a href="services-flysystem.html">Flysystem</a></li><li class="menu-level-2"><a href="services-lang.html">Lang</a></li><li class="menu-level-2"><a href="services-log.html">Log</a></li><li class="menu-level-2"><a href="services-mail.html">Mail</a></li><li class="menu-level-2"><a href="services-mongo.html">Mongo</a></li><li class="menu-level-2"><a href="services-redirect.html">Redirect</a></li><li class="menu-level-2"><a href="services-request.html">Request</a></li><li class="menu-level-2"><a href="services-response.html">Response</a></li><li class="menu-level-2"><a href="services-router.html">Router</a></li><li class="menu-level-2"><a href="services-session.html">Session</a></li><li class="menu-level-2"><a href="services-url.html">URL</a></li><li class="menu-level-2"><a href="services-view.html">View</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Misc.</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="misc-brood-console.html">Brood Console</a></li><li class="menu-level-2"><div class="nav-menu-title">Database</div><ul class="sidebar-level-3"><li class="menu-level-3"><a href="misc-database-factories.html">Factories</a></li><li class="menu-level-3"><a href="misc-database-migrations.html">Migrations</a></li></ul></li><li class="menu-level-2"><a href="misc-coding-style.html">Coding Style</a></li></ul></li></ul>
+
+        </div>
+        <div class="article col-md-9">
+            <p>You can learn how to install phalcon slayer, how to initially setup your environment.</p>
+<h2>Index:</h2>
+<ul>
+<li><a href="#requirements">Requirements</a><ul>
+<li><a href="#basic-requirements">Basic</a></li>
+<li><a href="#for-queuing">For Queuing</a></li>
+</ul>
+</li>
+<li><a href="#project-creation">Project Creation</a></li>
+<li><a href="#dot-environment">Dot Environment</a></li>
+<li><a href="#web-server">Web Server</a></li>
+</ul>
+<p><a name="requirements"></a></p>
+<h1>Requirements:</h1>
+<p>Before installing, there are plenty of packages that we need to install first:
+<a name="basic-requirements"></a></p>
+<h2>Basic requirements:</h2>
+<ul>
+<li>PHP version atleast 5.5.9</li>
+<li><a href="https://phalconphp.com/en/download">Phalcon Extension</a></li>
+<li><a href="https://getcomposer.org/">Composer</a></li>
+<li><a href="https://curl.haxx.se">cURL</a></li>
+</ul>
+<p><a name="for-queuing"></a></p>
+<h2>For Queuing:</h2>
+<ul>
+<li>You are required to install <a href="http://kr.github.io/beanstalkd/">Beanstalkd</a></li>
+</ul>
+<p>Most of these packages are already installed on your favorite os box.</p>
+<hr />
+<p><a name="project-creation"></a></p>
+<h1>Project Creation:</h1>
+<p>Using composer, you can create a new project, write this code on your terminal:</p>
+<pre><code class="language-shell">composer create-project phalconslayer/slayer --prefer-dist <folder name>
+</code></pre>
+<p>After running this command, there should be an output, similar below:</p>
+<pre><code class="language-shell">Installing phalconslayer/slayer (version)
+  - Installing phalconslayer/slayer (version)
+    Downloading: 100%
+
+Created project in folderName
+> php -r "copy(&#039;.env.example&#039;, &#039;.env&#039;);"
+Loading composer repositories with package information
+Installing dependencies (including require-dev)
+</code></pre>
+<hr />
+<p><a name="dot-environment"></a></p>
+<h1>Dot Environment:</h1>
+<p>Let us say we have a  <strong>local</strong> / <strong>staging</strong> / <strong>production</strong> servers. The <strong>local</strong> comes with multiple <strong><em>developers</em></strong>, however we don&#039;t want our developers to view those passwords or we call it "credentials", such as our production database, mail credentials, aws access token and many more.</p>
+<p>On your project we have the "<strong>.env.example</strong>", let&#039;s copy this file and name it as "<strong>.env</strong>". Furthermore, this file handles a global constant value, let us say we have this:</p>
+<pre><code class="language-shell">DB_HOST=192.168.10.10
+</code></pre>
+<p>You can access the constant value <code>DB_HOST</code> by using the function <code>env(<constant name>, <default value>)</code></p>
+<p>Try to check the file <strong>config/database.php</strong>, and find the <code>env(&#039;DB_HOST&#039;, &#039;localhost&#039;)</code>, if there will be no value in our source, it will be based on the default value which is <code>localhost</code></p>
+<p><strong>Note:</strong>
+This file is already ignored under your <a href="https://git-scm.com/"><strong><em>GIT Distributed Version Control</em></strong></a></p>
+<p><a name="web-server"></a></p>
+<h1>Web Server</h1>
+<p>Slayer has configurations for Apache2 and NginX, it is located at:</p>
+<ul>
+<li>project-name/storage/etc/nginx/sites-available/</li>
+<li>project-name/storage/etc/apache2/sites-available/</li>
+</ul>
+<p>we have an example <strong>slayer.app</strong> file for both web server, you could copy the file and put it in your web server <strong>sites-available</strong> or you could apply a Symlink.</p>
+<p>Let us say we have an NginX under UbuntuOS:</p>
+<pre><code class="language-shell">cd /etc/nginx/sites-enabled/
+ln -s ../../../var/www/phalconslayer/slayer/storage/etc/nginx/sites-available/slayer.app
+sudo service nginx restart
+</code></pre>
+<p>The command above shows that you must be located at the nginx <strong>sites-enabled</strong> and you must call the command <code>ln -s</code> to apply symlink. We&#039;ve also restarted the nginx server.</p>
+<p>Add a domain on your <code>/etc/hosts</code> file and point it to your local IP, you should be able now to access your website.</p>
+<p>To check that, you can try this cURL command:</p>
+<pre><code class="language-shell">curl -v -s slayer.app 1> /dev/null
+</code></pre>
+<p>The curl command above must return this kind of format:</p>
+<pre><code class="language-shell">* Connected to slayer.app (192.168.10.10) port 80 (#0)
+> GET / HTTP/1.1
+> User-Agent: curl/7.35.0
+> Host: slayer.app
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+* Server nginx/1.8.0 is not blacklisted
+< Server: nginx/1.8.0
+< Date: Thu, 03 Mar 2016 00:45:27 GMT
+< Content-Type: text/html; charset=UTF-8
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< Set-Cookie: slayer=ojoo6udniihctp11hcjh1hcll3; path=/
+< Expires: Thu, 19 Nov 1981 08:52:00 GMT
+< Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+< Pragma: no-cache
+</code></pre>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../.docs-compiled/assets/js/jquery.js"></script>
+  <script src="../.docs-compiled/assets/js/bootstrap.js"></script>
+</html>

@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(http://fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3dyU-eqv6n8lOlIZB5nq_8UM.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Josefin Sans Thin'), local('JosefinSans-Thin'), url(http://fonts.gstatic.com/s/josefinsans/v9/q9w3H4aeBxj0hZ8Osfi3d1dBB84BqlWy1BjOnCrU9PY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(http://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5j0LW-43aMEzIO6XUTLjad8.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans'), local('JosefinSans'), url(http://fonts.gstatic.com/s/josefinsans/v9/xgzbb53t8j-Mo-vYa23n5ugdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dancing Script'), local('DancingScript'), url(https://fonts.gstatic.com/s/dancingscript/v7/DK0eTGXiZjN6yA8zAEyM2Ud0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.article {
+    border-top: 1px dashed #ccc;
+    border-left: 1px dashed #ccc;
+    padding-top: 10px;
+}
+.sidebar {
+    border-top: 1px dashed #ccc;
+}
+.sidebar ul {
+    list-style-type: none;
+}
+.menu-level-1 > .nav-menu-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    border-bottom: 1px dashed #c3c3c3;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+ul[class*="sidebar-level"],
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+.sidebar-level-2 {
+    padding:0;
+}
+h1 {
+    margin-top: 1.5em;
+}
+h2, h3, h4 {
+    margin-top: 1em;
+}
+h5, h6 {
+    margin-top: 0.5em;
+}
+
+nav .active-slayer a {
+    border: 1px solid #0E99F5;
+    padding: 7px;
+    padding-bottom: 5px;
+    margin-top: 8px;
+    color: #0E99F5;
+}
+
+nav .active-slayer a:hover {
+    border: 1px solid #2D3F51;
+    color: #2D3F51;
+}
+
+nav a {
+    color: #95989A;
+}
+
+.navbar {
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    background-color: #FFFFFF;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #E1E1E1;
+    padding-top: 5px;
+    padding-right: 15px;
+    margin-top: 2px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus{
+    background-color: transparent;
+}
+
+.navbar-brand {
+    font-family: "Dancing Script OT";
+    font-size: 40px;
+    height: 57px;
+    color: #2C3E50;
+}
+
+.navbar-form i {
+    color: #95989A;
+}
+
+.dropdown-toggle {
+    background-color: transparent;
+    color: #95989A;
+    border: 1px solid #95989A;
+}
+.version {
+    margin-top: 60px;
+}
