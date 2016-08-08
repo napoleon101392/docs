@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brood Console - Solid Layer Documentation</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../.docs-compiled/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="../.docs-compiled/assets/css/slayer.css">
+  </head>
+  <body>
+    <nav class="navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="#">S.layer</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav-link active-slayer"><a href="#">Documentation</a></li>
+                <li class="nav-link"><a href="#">Forum</a></li>
+                <li>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group has-feedback">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <i class="glyphicon glyphicon-search form-control-feedback"></i>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav>    <div class="container">
+      <div class="row">
+        <div class="col-md-3 version">
+          <div class="btn-group">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    v1.4.0 <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">v1.4.1</a></li>
+    <li><a href="#">v1.4.2</a></li>
+    <li><a href="#">v1.4.3</a></li>
+    <li><a href="#">v1.4.4</a></li>
+  </ul>
+</div>
+        </div>
+        <div class="col-md-9">
+            <h1>Brood Console</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sidebar col-md-3">
+            <ul class="sidebar-level-1"><li class="menu-level-1"><div class="nav-menu-title">Prologue</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="prologue-change-log.html">Change Log</a></li><li class="menu-level-2"><a href="prologue-contribution-guide.html">Contribution Guide</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Setup</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="index.html">Installation</a></li><li class="menu-level-2"><a href="setup-configuration.html">Configuration</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Modular-MVC</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="modular-mvc-module.html">Module</a></li><li class="menu-level-2"><a href="modular-mvc-controller.html">Controller</a></li><li class="menu-level-2"><a href="modular-mvc-view.html">View</a></li><li class="menu-level-2"><a href="modular-mvc-model.html">Model</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Supporting Structure</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="supporting-structure-error-handler.html">Error Handler</a></li><li class="menu-level-2"><a href="supporting-structure-routing.html">Routing</a></li><li class="menu-level-2"><a href="supporting-structure-sandbox.html">Sandbox</a></li><li class="menu-level-2"><a href="supporting-structure-service-provider.html">Service Provider</a></li><li class="menu-level-2"><a href="supporting-structure-storage.html">Storage</a></li><li class="menu-level-2"><a href="supporting-structure-unit-testing.html">Unit Testing</a></li><li class="menu-level-2"><a href="supporting-structure-validation.html">Validation</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Services</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="services-aliases.html">Aliases</a></li><li class="menu-level-2"><a href="services-auth.html">Auth</a></li><li class="menu-level-2"><a href="services-cache.html">Cache</a></li><li class="menu-level-2"><a href="services-db.html">DB</a></li><li class="menu-level-2"><a href="services-dispatcher.html">Dispatcher</a></li><li class="menu-level-2"><a href="services-filter.html">Filter</a></li><li class="menu-level-2"><a href="services-flash.html">Flash</a></li><li class="menu-level-2"><a href="services-flashbag.html">FlashBag</a></li><li class="menu-level-2"><a href="services-flysystem.html">Flysystem</a></li><li class="menu-level-2"><a href="services-lang.html">Lang</a></li><li class="menu-level-2"><a href="services-log.html">Log</a></li><li class="menu-level-2"><a href="services-mail.html">Mail</a></li><li class="menu-level-2"><a href="services-mongo.html">Mongo</a></li><li class="menu-level-2"><a href="services-redirect.html">Redirect</a></li><li class="menu-level-2"><a href="services-request.html">Request</a></li><li class="menu-level-2"><a href="services-response.html">Response</a></li><li class="menu-level-2"><a href="services-router.html">Router</a></li><li class="menu-level-2"><a href="services-session.html">Session</a></li><li class="menu-level-2"><a href="services-url.html">URL</a></li><li class="menu-level-2"><a href="services-view.html">View</a></li></ul></li><li class="menu-level-1"><div class="nav-menu-title">Misc.</div><ul class="sidebar-level-2"><li class="menu-level-2"><a href="misc-brood-console.html">Brood Console</a></li><li class="menu-level-2"><div class="nav-menu-title">Database</div><ul class="sidebar-level-3"><li class="menu-level-3"><a href="misc-database-factories.html">Factories</a></li><li class="menu-level-3"><a href="misc-database-migrations.html">Migrations</a></li></ul></li><li class="menu-level-2"><a href="misc-coding-style.html">Coding Style</a></li></ul></li></ul>
+
+        </div>
+        <div class="article col-md-9">
+            <p>We have a console tool called "brood" that provides scaffolding, database migrations and many more.</p>
+<h2>Basic Usage</h2>
+<p>To execute a command, go to your project folder and run this console command:</p>
+<pre><code class="language-shell">$ php brood
+</code></pre>
+<p>It should show a lists of commands like this</p>
+<pre><code class="language-shell">Brood (c) Daison Cariño version v1.3.0
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help            Display this help message
+  -q, --quiet           Do not output any message
+  -V, --version         Display this application version
+      --ansi            Force ANSI output
+      --no-ansi         Disable ANSI output
+  -n, --no-interaction  Do not ask any interactive question
+  -v|vv|vvv, --verbose  Increase the verbosity of messages: 1 for normal output,                                                                                                                                                  2 for more verbose output and 3 for debug
+
+Available commands:
+  env              Get current environment
+  help             Displays help for a command
+  list             Lists commands
+  optimize         Compile all the classes in to a single file.
+  run              Automated scripts to be run.
+  serve            Serve the application on the PHP development server
+ app
+  app:controller   Generate a new controller
+  app:module       Generate a new module
+  app:route        Generate a new route group
+ clear
+  clear:all        Clear all listed
+  clear:cache      Clear the storage/cache folder
+  clear:compiled   Clear the compiled classes
+  clear:logs       Clear the storage/logs folder
+  clear:session    Clear the storage/session folder
+  clear:views      Clear the storage/views folder
+ db
+  db:create        Create a new migration
+  db:migrate       Migrate the database
+  db:rollback      Rollback the last or to a specific migration
+  db:seed:create   Create a new database seeder
+  db:seed:factory  Seed based on the factories
+  db:seed:run      Run database seeders
+  db:status        Show migration status
+ mail
+  mail:inliner     Inline templates to make it suitable for emails
+ make
+  make:collection  Create a new collection
+  make:console     Generate a new console
+  make:model       Generate a database model
+ queue
+  queue:worker     Generalized Queue Worker
+ vendor
+  vendor:publish   Publish a vendor package
+</code></pre>
+<h1>Creating Console</h1>
+<p>You can create your own console command by executing this to your console</p>
+<pre><code class="language-shell">$ php brood make:console <name>
+</code></pre>
+<p>This command generates a <strong><em>php</em></strong> class file, located at `project-name/components/Console/<name>.php</p>
+<p>In your class, there is <code>$name</code> and <code>$description</code>, change it to allow brood to organize the commands, register your console located at <code>project-name/config/consoles.php</code>.</p>
+<p>Run <code>php brood</code>, the assigned <code>$name</code> must be listed there.</p>
+<hr />
+<h1>Slash</h1>
+<p>This handles the calls when executing your console</p>
+<hr />
+<h1>Arguments</h1>
+<p>This part requires an argument to be passed in, let&#039;s assume running <code>php brood make:console <name></code> means having the <code><name></code> as an argument.</p>
+<p>The sample in the generated has a multidimensional array, so you can have multiple arguments to be called.</p>
+<p>The inside array&#039;s first index is the <strong>title</strong> you want to describe, and to get the inserted value you should call <code>$this->input->getArgument(&#039;title&#039;);</code></p>
+<p>The array&#039;s second index is the mode of the argument, you can check the lists of available mode</p>
+<table>
+<thead>
+<tr><th>Model                    </th><th>Value</th></tr>
+</thead>
+<tbody>
+<tr><td>InputArgument::REQUIRED  </td><td>The argument is required</td></tr>
+<tr><td>InputArgument::OPTIONAL  </td><td>The argument is optional and therefore can be omitted</td></tr>
+<tr><td>InputArgument::IS_ARRAY  </td><td>The argument can contain an indefinite number of arguments and must be used at the end of the argument list</td></tr>
+</tbody>
+</table>
+<p>The array&#039;s third index is the argument&#039;s description</p>
+<hr />
+<h1>Options</h1>
+<p>This part is an optional to passed in, most commands has double slashes such as <code>--help</code> or <code>--verbose</code> those are the options calls.</p>
+<p>The sample in the generated has the same multidimensional array, which you could also have a multi options to be called.</p>
+<p>The inside array&#039;s first index is the <strong>title</strong> as well which will be triggered when calling <code>--<title></code>, to get the passed value once the command executed, you could call this <code>$this->input->getOption(&#039;title&#039;);</code></p>
+<p>The second index is the shortcut, maybe you wan&#039;t to make it as <strong>t</strong> that refers as the <strong>title</strong>.</p>
+<p>The third index is the option, below is the lists of available options</p>
+<table>
+<thead>
+<tr><th>Option                          </th><th>  Value</th></tr>
+</thead>
+<tbody>
+<tr><td>InputOption::VALUE_IS_ARRAY     </td><td>  This option accepts multiple values (e.g. --dir=/foo --dir=/bar)</td></tr>
+<tr><td>InputOption::VALUE_NONE         </td><td>  Do not accept input for this option (e.g. --yell)</td></tr>
+<tr><td>InputOption::VALUE_REQUIRED     </td><td>  This value is required (e.g. --iterations=5), the option itself is still optional</td></tr>
+<tr><td>InputOption::VALUE_OPTIONAL     </td><td>  This option may or may not have a value (e.g. --yell or --yell=loud)</td></tr>
+</tbody>
+</table>
+<p>The fourth is the description of your option</p>
+<p>and The fifth by default is <code>null</code> which you could pass a value</p>
+<hr />
+<h1>Explanation and Reference</h1>
+<p>We simplified the process of creating a console, as reference you can still review the library we used, the Symfony Console Component.</p>
+<p><strong><em>Link:</em></strong> <a href="http://symfony.com/doc/current/components/console/introduction.html">http://symfony.com/doc/current/components/console/introduction.html</a></p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="../.docs-compiled/assets/js/jquery.js"></script>
+  <script src="../.docs-compiled/assets/js/bootstrap.js"></script>
+</html>
