@@ -4,8 +4,8 @@
     <title>{{ $title }}{{ $baseTitle }}</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../public/assets/css/font-awesome.css">
-    <link rel="stylesheet" href="../public/assets/css/slayer.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/slayer.css">
   </head>
   <body>
     @include('includes.navigation-bar')
@@ -29,6 +29,6 @@
     </div>
   </body>
 
-  <script src="../public/assets/js/jquery.js"></script>
-  <script src="../public/assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
 </html>
