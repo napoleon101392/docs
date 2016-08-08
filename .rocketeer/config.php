@@ -41,7 +41,7 @@ return [
             'host'      => 'demo.phalconslayer.com',
             'username'  => 'root',
             'password'  => '',
-            'key'       => '~/.ssh/id_rsa',
+            'key'       => $_SERVER['HOME'].'/.ssh/id_rsa',
             'keyphrase' => '',
             'agent'     => '',
             'db_role'   => true,
