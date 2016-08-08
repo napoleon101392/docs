@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ $title }}{{ $baseTitle }}</title>
+    <title>{{ $title }}{{ $base_title }}</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 version">
-          @include('includes.drop-down-version')
+          @include('includes.drop-down-version', ['versions' => $versions])
         </div>
         <div class="col-md-9">
             <h1>{{ str_replace(' - ', '', $title) }}</h1>

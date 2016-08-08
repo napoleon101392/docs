@@ -14,7 +14,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-link active-slayer"><a href="http://docs.phalconslayer.com">Documentation</a></li>
+                <li class="nav-link active-slayer"><a href="{{ $doc_url }}">Documentation</a></li>
                 <li class="nav-link"><a href="#">Forum</a></li>
                 <li>
                     <form class="navbar-form navbar-left">
