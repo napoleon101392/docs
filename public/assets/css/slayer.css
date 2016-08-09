@@ -96,7 +96,6 @@ nav a {
     border-right: 0;
     border-bottom: 1px solid #E1E1E1;
     padding-top: 5px;
-    padding-right: 15px;
     margin-top: 2px;
 }
 .navbar ul li a:hover,
@@ -112,6 +111,10 @@ nav a {
 .navbar-form i {
     color: #95989A;
 }
+.nav-link {
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .dropdown-toggle {
     background-color: transparent;
     color: #95989A;
@@ -122,8 +125,9 @@ nav a {
 }
 pre {
     background: #f3f3f3;
-    border: 1px dashed #d3d3d3;
+    border: 1px solid #e3e3e3;
     padding: 20px 10px;
+    box-shadow: 0 2px 0 0 #e3e3e3;
 }
 .footer {
     border-top:2px dashed #ccc;

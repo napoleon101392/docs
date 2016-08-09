@@ -3,6 +3,8 @@
   <head>
     <title>{{ $title }}{{ $base_title }}</title>
     <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1,user-scalable=no,target-densitydpi=device-dpi" name="viewport">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
@@ -31,10 +33,10 @@
     <div class="footer">
       <div class="col-md-12">
         <div class="pull-left">
-          <div>Copyright &copy; {{ date('Y') }}</div>
+          <div>Copyright &copy; 2016</div>
           <div>Generated using <a target="_blank" href="https://github.com/php-pure/themer">Pure Themer</a></div>
         </div>
-        <div class="designed-by pull-right clear-fix">Designed By: <a target="_blank" href="#">napoleon.vyew.me</a></div>
+        <div class="designed-by pull-right clear-fix">Designed By: <a target="_blank" href="http://napoleon.vyew.me">napoleon.vyew.me</a></div>
       </div>
     </div>
     <script src="assets/js/jquery.js"></script>
