@@ -7,14 +7,16 @@ server {
 
     charset utf-8;
 
+    error_page 404 /404.html;
+
     location / {
-        try_files \$uri.html \$uri/ @notfound;
+        try_files \$uri.html \$uri/ 404;
     }
 
     location @notfound {
-      alias /404.html
+      alias 404.html;
       return 404;
-   }
+    }
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
