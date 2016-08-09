@@ -8,7 +8,7 @@ return [
     'Setup' => [
         'Installation'  => [
             'Phalcon' => __DIR__.'/setup/installation-phalcon.md',
-            'Slayer'  => __DIR__.'/setup/installation-phalcon.md',
+            'Slayer'  => __DIR__.'/setup/installation-slayer.md',
         ],
         'Configuration' => __DIR__.'/setup/configuration.md',
     ],
