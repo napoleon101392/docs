@@ -3,13 +3,18 @@ server {
     server_name beta-docs.phalconslayer.com;
     root \"{www_folder}\";
 
-    index index.html index.htm index.php;
+    index index.html;
 
     charset utf-8;
 
     location / {
-        try_files \$uri \$uri/ /index.php?\$query_string;
+        try_files \$uri.html \$uri/ @notfound;
     }
+
+    location @notfound {
+      alias /404.html
+      return 404;
+   }
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
