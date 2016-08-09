@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-link active-slayer"><a href="{{ $doc_url }}">Documentation</a></li>
-                <li class="nav-link"><a href="#">Forum</a></li>
+                <li class="nav-link"><a href="http://phalconslayer.slack.com">Slack</a></li>
                 <li>
                     <form class="navbar-form navbar-left">
                         <div class="form-group has-feedback">
