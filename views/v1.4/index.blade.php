@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
     <link rel="stylesheet" href="assets/css/slayer.css">
   </head>
   <body>
@@ -38,9 +39,13 @@
     </div>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
     <script type="text/javascript">
       $(function() {
-        $("table").addClass("table tableb-ordered");
+        $("table").addClass("table table-bordered");
+        $("pre").each(function (i, block) {
+          hljs.highlightBlock(block);
+        });
       });
     </script>
   </body>
