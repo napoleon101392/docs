@@ -6,7 +6,10 @@ return [
         'Contribution Guide' => __DIR__.'/prologue/contribution_guide.md',
     ],
     'Setup' => [
-        'Installation'  => __DIR__.'/setup/installation.md',
+        'Installation'  => [
+            'Phalcon' => __DIR__.'/setup/installation-phalcon.md',
+            'Slayer'  => __DIR__.'/setup/installation-phalcon.md',
+        ],
         'Configuration' => __DIR__.'/setup/configuration.md',
     ],
     'Modular-MVC' => [
