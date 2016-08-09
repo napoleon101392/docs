@@ -36,8 +36,7 @@
         <div class="designed-by pull-right clear-fix">Designed By: <a target="_blank" href="#">napoleon.vyew.me</a></div>
       </div>
     </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
   </body>
-
-  <script src="assets/js/jquery.js"></script>
-  <script src="assets/js/bootstrap.js"></script>
 </html>
