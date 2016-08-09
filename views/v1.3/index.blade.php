@@ -27,6 +27,15 @@
         </div>
       </div>
     </div>
+    <div class="footer">
+      <div class="col-md-12">
+        <div class="pull-left">
+          <div>Copyright &copy; {{ date('Y') }}</div>
+          <div>Generated using <a target="_blank" href="https://github.com/php-pure/themer">Pure Themer</a></div>
+        </div>
+        <div class="pull-right clear-fix">Designed By: <a target="_blank" href="#">napoleon.vyew.me</a></div>
+      </div>
+    </div>
   </body>
 
   <script src="assets/js/jquery.js"></script>

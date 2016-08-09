@@ -1,3 +1,4 @@
+/.rocketeer/logs/*
 /vendor/
 /public/*/*.html
 /public/*.html
