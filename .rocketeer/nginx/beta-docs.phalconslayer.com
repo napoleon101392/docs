@@ -13,11 +13,6 @@ server {
         try_files \$uri.html \$uri/ 404;
     }
 
-    location @notfound {
-      alias 404.html;
-      return 404;
-    }
-
     location = /favicon.ico { access_log off; log_not_found off; }
     location = /robots.txt  { access_log off; log_not_found off; }
 
