@@ -38,5 +38,10 @@
     </div>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        $("table").addClass("table tableb-ordered");
+      });
+    </script>
   </body>
 </html>
